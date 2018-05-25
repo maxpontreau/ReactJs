@@ -1,0 +1,7 @@
+.TrainingTitle{
+    list-style-position:inside;
+    border: 3px solid red;
+    list-style-type: none;
+    margin-bottom: 5px;
+    max-width:25%;
+}

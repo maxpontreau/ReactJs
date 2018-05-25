@@ -1,0 +1,16 @@
+.formTP  {
+    display: table;
+}
+
+.formElement {
+    display: table-row;
+    margin-bottom: 10px;
+}
+
+.labelForm {
+    display: table-cell;
+}
+
+.inputForm {
+    display: table-cell;
+}
