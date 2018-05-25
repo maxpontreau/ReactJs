@@ -6,19 +6,26 @@ class TodoLine extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {title: props.title, isDone: props.isDone }; /* ...props ? */
+        this.state = {title: props.title, isDone: props.isDone, delText:false }; /* ...props ? */
         this.onClickHandler = this.onClickHandler.bind(this);
     }
 
     onClickHandler(event) {
-
+        event.target.checked ? this.setState({delText:true}) : this.setState({delText:false});
     }
 
     render () {
+        const title = this.state.delText ?
+        (
+            <del>
+                {this.state.title}
+            </del>
+        ) : this.state.title;
+
         return (
             <tr className="todoLine">
-                <th className="todoCell todoTitle">{this.state.title}</th>
-                <th className="todoCell"><input id="checkBox" type="checkbox" onClick={this.onClickHandler}> </input></th>
+                <th className="todoCell todoTitle">{title}</th>
+                <th className="todoCell"><input id="checkBox" type="checkbox" onClick={this.onClickHandler}/></th>
             </tr>
         )
     }
