@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+      <title>React va CDN</title>  
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+     
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/reactdom.development.js"></script>
+     
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/babelstandalone/6.26.0/babel.min.js"></script>
+</head>
+<body>  
+<div id="react-root"></div>
+ 
+<script type="text/babel">
+    class FirstComponent extends React.Component {
+    render() {
+        return (<div className="whatever"> First component </div>);
+    }
+}
+
+ReactDOM.render(<FirstComponent/>, document.getElementById('react-root'),);     </script>
+</body>
+</html>
