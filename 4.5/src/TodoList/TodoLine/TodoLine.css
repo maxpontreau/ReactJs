@@ -1,0 +1,7 @@
+.todoCell {
+    border: 2px solid black;
+}
+
+.todoTitle {
+    text-transform: uppercase;
+}
